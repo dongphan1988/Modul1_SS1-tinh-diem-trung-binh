@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+nhập điểm vật lý.
+<input type="text" id="vatly"/>
+nhập điểm toán.
+<input type="text" id="toan"/>
+nhập điểm hóa.
+<input type="text" id="hoa"/><br>
+<button type="button" onclick="ketqua()">KẾT QUẢ</button>
+<p id="view"></p>
+<script>
+    function ketqua() {
+        let diemvatly = parseFloat(document.getElementById("vatly").value);
+        let diemtoan = parseFloat(document.getElementById("toan").value);
+        let diemhoa = parseFloat(document.getElementById("hoa").value);
+        let diemtrungbinh = (diemhoa + diemtoan + diemvatly) / 3;
+        document.getElementById("view").innerHTML = "điểm trung bình 3 môn là : " + diemtrungbinh;
+    }
+
+</script>
+</body>
+</html>
